@@ -94,8 +94,7 @@ app.put("/change-password", async (request, response) => {
       const changePasswordQuery = `
         UPDATE  user
         SET
-            password = '${hashedPassword}'
-        `;
+            password = '${hashedPassword}'`;
       await dataBase.run(changePasswordQuery);
       response.status(200);
       response.send("Password updated");
